@@ -1,9 +1,12 @@
 def prisoner_problem():
     import random
-    import numpy as np
-    n = 100
-    prisoners = list(range(1, n+1))
-    picked_prisoners = set()
-    print(type(picked_prisoners))
 
-prisoner_problem()
+    prisoners = list(range(1, 101))
+    picked_prisoners = set()
+
+    for i in range(1, 100):
+        random.shuffle(prisoners)
+        if i in prisoners[0:50]:
+            picked_prisoners.add(i)
+    return picked_prisoners
+print(len(prisoner_problem()))
