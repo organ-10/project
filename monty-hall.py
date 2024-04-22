@@ -15,4 +15,4 @@ for i in range(tri):
     else:
         change+=1
 
-print(f"stay: {stay}, change: {change}")
+print(f"stay: {(stay/tri) * 100}%, change: {(change/tri) * 100}%")
